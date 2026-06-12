@@ -43,7 +43,8 @@ html, body {
     /* تحسين iOS rendering */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-
+ /* بدل scale الكبير (بيكسر iPhone أحيانًا) */
+    transform: scale(1.25);
     will-change: transform;
 
    
