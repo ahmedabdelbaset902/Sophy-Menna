@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl>
+
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دعوة فرحنا</title>
+<!-- =========================
+         GOOGLE FONTS
+    ========================== -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<!-- ✅ الخط اللي كان ناقص -->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+<!-- =========================
+         FONT AWESOME (non-blocking)
+    ========================== -->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+
+<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/eventDetails.css">
+<link rel="stylesheet" href="styles/hreo.css">
+<link rel="stylesheet" href="styles/schedule.css">
+<link rel="stylesheet" href="styles/thanks.css">
+<link rel="stylesheet" href="styles/footer.css">
+<link rel="stylesheet" href="styles/Photo.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- MUSIC PLAYER -->
+
+    <div class="music-player">
+
+        <button id="musicBtn">
+
+            <div class="music-disc">
+                <i id="musicIcon" class="fa-solid fa-music"></i>
+            </div>
+
+        </button>
+
+        <audio id="bgMusic" preload="auto" playsinline webkit-playsinline>
+            <source src="music1.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+
+
+    <video id="introVideo" class="bg-video" muted playsinline webkit-playsinline preload="auto">
+        <source src="imags/Back1.mp4" type="video/mp4">
+    </video>
+    <!-- MAIN PAGE -->
+    <section class="main" id="main">
+
+        <section class="hero">
+
+
+
+            <div class="video-wrapper">
+                <video class="bg-video" autoplay muted loop playsinline preload="auto">
+                    <source src="imags/Hero.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="hero-content">
+                <p class="aaa"> S & M . 2026</p>
+                <p class="bismillah">
+                    We're getting married
+                </p>
+
+                <p class="small-text">
+                    Sobhi
+                </p>
+                <p class="small-text">
+                    &
+                </p>
+                <p class="small-text">
+                    Menna
+                </p>
+
+                <div class="date-box">
+                    ـــ 2026 . 6 . 21 ـــ
+                </div>
+
+
+                <button class="save-btn" onclick="addToCalendar()">
+                    Save The Date ➝
+                </button>
+            </div>
+
+
+
+        </section>
+
+
+
+
+        <!-- =========================
+     EVENT DETAILS
+========================== -->
+        <section class="event-section">
+
+
+
+
+
+
+            <!-- SECTION TITLE -->
+            <div class="section-title">
+                <h2>Whene & Where </h2>
+            </div>
+
+            <div class="card">
+
+                <!-- CONTENT -->
+                <div class="content">
+
+                    <div class="img-hall">
+                        <img src="./imags/hallimage.png" alt="">
+                    </div>
+
+
+                    <div class="arabic">قاعه ليلتي في فندق لوسيال</div>
+                    <div class="arabicP"> مدينه نصر ,محافظة القاهره </div>
+                    <div class="arabicP"> وقت البدء 8:00 مساء </div>
+
+                    <a href="https://maps.google.com/?q=Le+Ciel+Hotel" target="_blank" class="btn">
+                        Get Directions ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- MAP -->
+            <div class="map-box">
+                <iframe src="https://maps.google.com/maps?q=Le%20Ciel%20Hotel&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+         schedule
+    ========================== -->
+        <section class="schedule">
+
+            <h2 class="schedule-title">The Wedding Day </h2>
+
+            <div class="timeline">
+
+                <!-- 1 -->
+                <div class="timeline-item">
+
+                    <div class="top-icon">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>8:00 PM</span>
+                        <h3 class="clickable">Guest Arrival</h3>
+
+
+
+                        <p class="details">
+
+
+                            <span class="ar">
+                                يبدأ الضيوف في الوصول ويتم استقبالهم بالمشروبات والموسيقى.
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- 2 -->
+                <div class="timeline-item">
+
+                    <div class="top-icon">
+                        <i class="fa-solid fa-ring"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>9:00 PM</span>
+                        <h3 class="clickable">Ceremony</h3>
+
+
+
+                        <p class="details">
+
+
+                            <span class="ar">
+                                يبدأ حفل الزفاف حيث نتبادل عهودنا.
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- 3 -->
+                <div class="timeline-item">
+
+                    <div class="top-icon">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>10:00 PM</span>
+                        <h3 class="clickable">Break Time</h3>
+
+
+
+                        <p class="details">
+
+
+                            <span class="ar">
+                                استراحة قصيرة للعروسين للراحة والاستعداد لباقي فقرات الحفل.
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+                <!-- 5 -->
+                <div class="timeline-item">
+
+                    <div class="top-icon">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+
+                    <div class="circle clickable"></div>
+
+                    <div class="content">
+                        <span>11:00 PM</span>
+                        <h3 class="clickable">Party Time</h3>
+
+
+
+                        <p class="details">
+
+
+                            <span class="ar">
+                                لنحتفل معًا بالموسيقى والرقص والفرح!
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <!-- =========================
+     THANK YOU
+========================== -->
+
+        <section>
+
+            <div class="thanks" id="thanks">
+
+                <h2 id="thanksTitle">
+                    See You Here
+                </h2>
+
+                <p id="thanksEn"></p>
+
+                <div id="thanksAr" class="thanks-ar"></div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+         FOOTER
+    ========================== -->
+
+        <footer>
+
+            S & M Wedding Invitation © 2026
+
+        </footer>
+
+    </section>
+
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/schedule.js"></script>
+    <script src="./scripts/thanks.js"></script>
+</body>
+
+</html>

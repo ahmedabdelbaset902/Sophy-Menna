@@ -1,0 +1,193 @@
+/* ===============================
+   THANK YOU SECTION
+================================ */
+
+.thanks{
+    position:relative;
+
+    width:min(950px,92%);
+    margin:100px auto 140px;
+
+    padding:clamp(50px,6vw,90px) clamp(20px,5vw,60px);
+
+    text-align:center;
+
+    border-radius:42px;
+
+    background:rgba(235, 239, 217, 0.75);
+
+    box-shadow:0 30px 80px rgba(255,79,139,.12);
+
+    border:1px solid rgba(255,79,139,.15);
+
+    overflow:hidden;
+
+    backdrop-filter:blur(12px);
+}
+
+.thanks::before{
+    content:"";
+
+    position:absolute;
+    inset:-40%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,79,139,.15),
+            transparent 60%
+        );
+
+    filter:blur(50px);
+
+    z-index:0;
+}
+
+.thanks > *{
+    position:relative;
+    z-index:1;
+}
+
+/* ===============================
+   TITLE
+================================ */
+
+.thanks h2{
+    font-family:'Great Vibes', cursive;
+
+    font-size:clamp(42px,5vw,68px);
+
+    font-weight:400;
+
+    color:#bb8404;
+
+    margin-bottom:30px;
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    text-shadow:
+        0 2px 10px rgba(255,61,127,.12);
+}
+
+.thanks h2.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.thanks h2::after{
+    content:"";
+
+    display:block;
+
+    width:120px;
+    height:2px;
+
+    margin:12px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #bb8404,
+            transparent
+        );
+}
+
+/* ===============================
+   TEXT
+================================ */
+
+.thanks p{
+    max-width:720px;
+
+    margin:25px auto 0;
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:22px;
+
+    line-height:1.9;
+
+    color:#000000; 
+
+    font-style:italic;
+
+    font-weight:500;
+
+    letter-spacing:.3px;
+
+    min-height:120px;
+
+    white-space:pre-line;
+}
+
+.thanks-ar{
+    margin-top:25px;
+
+    direction:rtl;
+
+    color:#000000;
+
+   font-family: 'Amiri', serif;
+
+    font-size:28px;
+
+    line-height:2;
+
+    white-space:pre-line;
+
+    min-height:60px;
+}
+
+/* ===============================
+   CURSOR
+================================ */
+
+.typing-cursor::after{
+    content:"|";
+
+    display:inline-block;
+
+    margin-left:2px;
+
+    animation:blink .7s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:0;
+    }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .thanks{
+        border-radius:28px;
+
+        padding:50px 20px;
+    }
+
+    .thanks h2{
+        font-size:52px;
+    }
+
+    .thanks p{
+        font-size:18px;
+
+        min-height:150px;
+    }
+
+    .thanks-ar{
+        font-size:22px;
+    }
+}
