@@ -3,13 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body {
     width: 100%;
     height: 100%;
-    overflow-x: visible; /* أهم سطر */
+    overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+
+    background: black; /* 🔥 مهم جدًا لمنع الأبيض */
 }
+
+/* تعطيل أي عناصر ممكن تعمل flash */
 body::before,
 body::after,
 .light,
@@ -18,19 +23,15 @@ body::after,
 }
 
 body {
-
-      font-family: 'Amiri', serif;
-
-background-color: #f4e7d3;
-    transition: background 1s ease;
-
-    position: relative;
-
+    font-family: 'Amiri', serif;
+    background-color: #f4e7d3;
     text-align: center;
-
     color: #222;
 }
 
+/* =========================
+   SCENE
+========================= */
 .scene {
     position: fixed;
     inset: 0;
@@ -52,17 +53,20 @@ background-color: #f4e7d3;
 
     z-index: 9999;
 
+    background: black; /* 🔥 أهم سطر */
+
     opacity: 1;
     visibility: visible;
-
-    transform: scale(1);
 
     transition: opacity 1.2s ease, transform 1.2s ease, visibility 0s linear 1.2s;
 
     pointer-events: auto;
 }
 
-.bg-video{
+/* =========================
+   VIDEO
+========================= */
+.bg-video {
     position: absolute;
     inset: 0;
 
@@ -71,11 +75,20 @@ background-color: #f4e7d3;
 
     object-fit: cover;
 
-    z-index: -1;
+    z-index: 0; /* 🔥 بدل -1 */
 
     transform: scale(1.26);
+
+    background: black;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
+/* لما الفيديو يبقى جاهز */
+.bg-video.loaded {
+    opacity: 1;
+}
 
 .main {
     display: none;
