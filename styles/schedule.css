@@ -1,0 +1,176 @@
+/* =========================================
+   SCHEDULE SECTION
+========================================= */
+
+.schedule{
+    width:100%;
+    padding:70px 0;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.schedule-title{
+    text-align:center;
+    font-family:'Great Vibes', cursive;
+    font-size:50px;
+    color:#000000;
+    margin-bottom:35px;
+    font-weight: 500;
+}
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.timeline{
+    display:flex;
+    flex-wrap:nowrap;
+    align-items:stretch;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    -webkit-overflow-scrolling:touch;
+
+    scroll-snap-type:x proximity;
+
+    padding:0 12px;
+
+    gap:12px;
+ direction: rtl; 
+    scrollbar-width:none;
+}
+
+.timeline::-webkit-scrollbar{
+    display:none;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.timeline-item{
+    flex:none;          /* مهم للـ Safari */
+    width:220px;        /* بدل النسب المئوية */
+
+    scroll-snap-align:center;
+
+    padding:12px 8px;
+
+    border:none;
+    border-radius:0;
+    box-shadow:none;
+    background:transparent;
+}
+
+/* =========================================
+   ICON
+========================================= */
+
+.top-icon{
+    width:58px;
+    height:58px;
+
+    margin:0 auto 12px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+
+    color:#bb8404;
+    background:#fff;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* =========================================
+   CIRCLE
+========================================= */
+
+.circle{
+    width:8px;
+    height:8px;
+
+    border-radius:50%;
+
+    margin:0 auto 12px;
+
+    background:#bb8404;
+}
+
+.circle::after{
+    display:none;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.timeline .content{
+    text-align:center;
+}
+
+.content h3{
+    font-size:17px;
+    margin-bottom:5px;
+    color:#4b1730;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.content span{
+    display:block;
+    font-size:10px;
+    letter-spacing:2px;
+    color:#8b8b8b;
+    margin-bottom:8px;
+}
+
+.details .ar{
+    display:block;
+    direction:rtl;
+    font-family:'Amiri', serif;
+    color:#666;
+    line-height:1.7;
+    font-size:12px;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .schedule-title{
+        font-size:40px;
+    }
+
+    .timeline{
+        padding:0 8px;
+        gap:8px;
+    }
+
+    .timeline-item{
+        width:180px;
+        padding:10px 6px;
+    }
+
+    .top-icon{
+        width:52px;
+        height:52px;
+        font-size:22px;
+    }
+
+    .content h3{
+        font-size:15px;
+    }
+
+    .details .ar{
+        font-size:11px;
+    }
+}
